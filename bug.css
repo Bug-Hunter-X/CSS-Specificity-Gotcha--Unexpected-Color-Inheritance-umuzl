@@ -1,0 +1,17 @@
+The following CSS code snippet might seem correct at first glance, but it hides a subtle error related to specificity and inheritance:
+
+```css
+div {
+  color: blue;
+}
+
+p {
+  color: red;
+}
+
+div p {
+  color: green;
+}
+```
+
+The intention is that paragraphs inside divs should be green, paragraphs outside divs should be red, and all other elements should be blue.  However, this may not behave as expected in certain scenarios.

@@ -1,0 +1,19 @@
+The solution involves using more specific selectors to override the less specific ones:
+
+```css
+div {
+  color: blue;
+}
+
+p {
+  color: red;
+}
+
+div p {
+  color: green !important; /*Added !important to ensure overriding*/
+}
+```
+
+Adding `!important` ensures that the `div p` selector overrides any other styles.  However, overuse of `!important` should be avoided as it can make CSS harder to maintain. A better solution would be to adjust the selectors to ensure correct specificity without relying on `!important`.
+
+For example, if you are sure that the paragraph will only be within a div with a specific id, then you can add that in selector, increasing the specificity enough to override the general paragraph selector.
